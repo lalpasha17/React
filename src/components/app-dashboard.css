@@ -1,0 +1,18 @@
+.dashboard-container {
+    position: relative;
+    overflow: hidden;
+   
+}
+
+.bg-anime {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 150%;
+    border: none;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+

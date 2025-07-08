@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.bgimage{
+        background-image:url("/public/L1.jpg") ;
+        height: 100vh;
+        background-size: cover;
+}
