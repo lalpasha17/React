@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const conString = "mongodb://127.0.0.1:27017";
+const conString = "mongodb+srv://admin:admin@123@cluster0.fphhpgf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 const client = new MongoClient(conString);
 let db;
 
