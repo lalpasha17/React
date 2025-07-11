@@ -27,7 +27,8 @@ export function EditAppointment()
               UserId:cookies['userid']
         },
         onSubmit:(appointment)=>{
-              axios.put(`http://127.0.0.1:3300/edit-appointment/${params.id}`,appointment).then(()=>{
+              axios.put(`https://backend-react-o7lg.onrender.com/edit-appointment/${params.id}`, appointment)
+.then(()=>{
                 alert("Appointment Details Updated");
                 navigate("/appointments-dashboard")
               })

@@ -16,7 +16,8 @@ export function DeleteAppointment()
     })
     function handleDeleteClick()
     {
-        axios.delete(`http://127.0.0.1:3300/delete-appointment/${params.id}`).then(()=>{
+        axios.delete(`https://backend-react-o7lg.onrender.com/delete-appointment/${params.id}`)
+.then(()=>{
            navigate("/appointments-dashboard");
         })
     }

@@ -14,7 +14,8 @@ export function  UserRegister()
           Mobile:" "
         },
         onSubmit:(data)=>{
-            axios.post(`http://127.0.0.1:3300/register-user`,data).then(()=>{
+          axios.post(`https://backend-react-o7lg.onrender.com/register-user`, data)
+.then(()=>{
                alert("Registerd successfully")
             navigate("/login")
             })

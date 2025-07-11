@@ -11,7 +11,8 @@ export function AppointmentDashboard()
     const[appointments,setAppointments]=useState<AppointmentContracts[]>();
 
     useEffect(()=>{
-        axios.get(`http://127.0.0.1:3300/appointments/${cookies['userid']}`).then(response=>{
+        axios.get(`https://backend-react-o7lg.onrender.com/appointments/${cookies['userid']}`)
+.then(response=>{
             setAppointments(response.data);
         })
     })

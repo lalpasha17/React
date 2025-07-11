@@ -16,7 +16,8 @@ export function AddAppointment()
 
         },
         onSubmit:(appointments)=>{
-             axios.post(`http://127.0.0.1:3300/add-appointment`,appointments).then(()=>{
+             axios.post(`https://backend-react-o7lg.onrender.com/add-appointment`, appointments)
+.then(()=>{
                 alert("appointment added successfully");
                navigate("/appointments-dashboard");
              })

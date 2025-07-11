@@ -7,7 +7,10 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const conString = "mongodb+srv://admin:admin@123@cluster0.fphhpgf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const conString = "mongodb+srv://admin:admin%40123@cluster0.fphhpgf.mongodb.net/todo-react?retryWrites=true&w=majority&appName=Cluster0&tls=true";
+
+
+
 const client = new MongoClient(conString);
 let db;
 
@@ -19,9 +22,11 @@ async function connectToDB() {
     console.log("MongoDB connected");
 
     // Start server only after DB is connected
-    app.listen(3300, () => {
-      console.log("Server started: http://127.0.0.1:3300");
-    });
+    const PORT = process.env.PORT || 3300;
+app.listen(PORT, () => {
+  console.log(`Server started on port ${PORT}`);
+});
+
   } catch (err) {
     console.error("MongoDB connection error:", err);
   }
